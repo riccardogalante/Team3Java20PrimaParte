@@ -6,6 +6,9 @@ public class Main {
         System.out.println("Denise, Denise, 28, Cosenza, Pilates, Tutto," +
                 " Vuoto ,  Orgoglio e pregiudizio, Mrs. Doubtfire, Vuoto");
 
+        System.out.println("Marc Josef, Conanan, 23, Milano, Nuoto, cotoletta bolognese," +
+                " Dota2 ,  Norwegian Wood, Pulp fiction, Ciccio");
+
     }
 }
 
