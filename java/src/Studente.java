@@ -1,5 +1,7 @@
 package src;
 
+import java.util.ArrayList;
+
 public class Studente {
     private String nome;
     private String cognome;
@@ -107,17 +109,21 @@ public class Studente {
 
     @Override
     public String toString() {
-        return "Studente{" +
-                "nome='" + nome + '\'' +
-                ", cognome='" + cognome + '\'' +
-                ", età=" + età +
-                ", città='" + città + '\'' +
-                ", passatempo='" + passatempo + '\'' +
-                ", ciboPreferito='" + ciboPreferito + '\'' +
-                ", videogiocoPreferito='" + videogiocoPreferito + '\'' +
-                ", filmPreferito='" + filmPreferito + '\'' +
-                ", libroPreferito='" + libroPreferito + '\'' +
-                ", nomeCucciolo='" + nomeCucciolo + '\'' +
-                '}';
+        return "Studente(" +
+                "nome : " + nome +
+                ", cognome : " + cognome +
+                ", età : " + età +
+                ", città : " + città +
+                ", passatempo : " + passatempo +
+                ", ciboPreferito : " + ciboPreferito +
+                ", videogiocoPreferito : " + videogiocoPreferito +
+                ", filmPreferito : " + filmPreferito +
+                ", libroPreferito : " + libroPreferito +
+                ", nomeCucciolo : " + nomeCucciolo +
+                ')';
     }
+
+
+
+
 }
