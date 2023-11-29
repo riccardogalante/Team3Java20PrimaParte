@@ -9,10 +9,10 @@ public class Main {
                 "powerlift", " carbonara", "Elden Ring", "Piccoli Brividi", "Kingsman", " Cipo");
 
         Studente studente2 = new Studente("Denise", "De Leo", 28, "Cosenza",
-                "Pilates", " Tutto", " ", "Mrs. Doubtfire", "Orgoglio e pregiudizio", "  ");
+                "Pilates", " Tutto", "", "Mrs. Doubtfire", "Orgoglio e pregiudizio", "");
 
         Studente studente3 = new Studente("Roberto", "Favaro", 19, "Zoppola",
-                "Videogiochi", " Pizza", "Halo", "Senza domani", "Nessuno", "Luna");
+                "Videogiochi", " Pizza", "Halo", "Senza domani", "", "Luna");
 
         Studente studente4 = new Studente("Marc Josef", "Conanan", 23, "Milano",
                 "Nuoto", "cotoletta bolognese", " Dota2", " Pulp fiction", " Norwegian Wood", "Ciccio");
@@ -22,6 +22,9 @@ public class Main {
         ordineAlfabetico(studente1.getCognome()+ " "+ studente1.getNome(), studente2.getCognome()+ " " + studente2.getNome(), studente3.getCognome()+ " " + studente3.getNome(), studente4.getCognome()+ " "+ studente4.getNome());
 
         datoEtà(team);
+
+        stampaCucciolo(team);
+
 
     }
     //metodo per l'ordine alfabetico
@@ -45,7 +48,27 @@ public class Main {
         for (int i = 0; i < team.length; i++) {
             System.out.println(team[i].getNome() + " " + team[i].getEtà());
         }
+
     }
+    public static void stampaCucciolo(Studente[] team){
+        for(int i = 0; i < team.length; i++){
+            if(!team[i].getNomeCucciolo().isEmpty()){
+                System.out.println("Studenti con animale domestico : " + team[i].getNome());
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
