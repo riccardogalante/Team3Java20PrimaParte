@@ -27,6 +27,10 @@ public class Studente {
         this.nomeCucciolo = nomeCucciolo;
     }
 
+    public int confrontaPerEtà(Studente altroStudente) {
+        return Integer.compare(this.età, altroStudente.età);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -106,6 +110,7 @@ public class Studente {
     public void setNomeCucciolo(String nomeCucciolo) {
         this.nomeCucciolo = nomeCucciolo;
     }
+
 
     @Override
     public String toString() {
