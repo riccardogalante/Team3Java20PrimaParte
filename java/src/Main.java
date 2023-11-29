@@ -20,6 +20,7 @@ public class Main {
         Studente[] team = {studente1, studente2, studente3, studente4};
 
         datoEtà(team);
+        ordineAlfabetico(studente1,studente2,studente3,studente4);
     }
     //metodo per l'ordine alfabetico
     public static void ordineAlfabetico(Studente studente1, Studente studente2, Studente studente3, Studente studente4){
