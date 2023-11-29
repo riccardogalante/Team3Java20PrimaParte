@@ -22,7 +22,7 @@ public class Main {
         ordineAlfabetico(studente1.getCognome()+ " "+ studente1.getNome(), studente2.getCognome()+ " " + studente2.getNome(), studente3.getCognome()+ " " + studente3.getNome(), studente4.getCognome()+ " "+ studente4.getNome());
 
         datoEtà(team);
-        ordineAlfabetico(studente1,studente2,studente3,studente4);
+
     }
     //metodo per l'ordine alfabetico
     public static void ordineAlfabetico(String studente1, String studente2, String studente3, String studente4){
