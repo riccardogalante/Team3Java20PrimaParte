@@ -1,4 +1,7 @@
 package src;
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         // Creating instances of Studente
@@ -17,6 +20,12 @@ public class Main {
         Studente[] team = {studente1, studente2, studente3, studente4};
 
         datoEtà(team);
+    }
+    //metodo per l'ordine alfabetico
+    public static void ordineAlfabetico(Studente studente1, Studente studente2, Studente studente3, Studente studente4){
+        String[] cognome = {String.valueOf(studente1), String.valueOf(studente2), String.valueOf(studente3), String.valueOf(studente4)};
+        Arrays.sort(cognome);
+        System.out.println(Arrays.toString(cognome));
     }
     // metodo per prendere l'età
     public static void datoEtà(Studente[] team) {
