@@ -25,7 +25,7 @@ public class Main {
 
         stampaCucciolo(team);
 
-
+        videogiocoLOL(team);
     }
     //metodo per l'ordine alfabetico
     public static void ordineAlfabetico(String studente1, String studente2, String studente3, String studente4){
@@ -48,7 +48,6 @@ public class Main {
         for (int i = 0; i < team.length; i++) {
             System.out.println(team[i].getNome() + " " + team[i].getEtà());
         }
-
     }
     public static void stampaCucciolo(Studente[] team){
         for(int i = 0; i < team.length; i++){
@@ -56,10 +55,21 @@ public class Main {
                 System.out.println("Studenti con animale domestico : " + team[i].getNome());
             }
         }
-
     }
 
 
+
+
+
+    public static void videogiocoLOL(Studente[] team){
+        for(int i = 0; i < team.length; i++){
+            if(team[i].getVideogiocoPreferito() == "LOL"){
+                System.out.println("Ha scritto LOL come videgioco preferito: "+ team[i].getNome());
+            }else if (team[i].getVideogiocoPreferito() == "League of legend"){
+                System.out.println("Ha scritto League of legend come videogioco preferito: " + team[i].getNome());
+            }
+        }
+    }
 
 }
 
