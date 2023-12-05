@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Studente {
     private String nome;
     private String cognome;
+    //TODO mai gli accenti
     private int età;
     private String città;
     private String passatempo;

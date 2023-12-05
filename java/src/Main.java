@@ -3,6 +3,8 @@ package src;
 import java.util.Arrays;
 
 public class Main {
+
+    ///TODO la classe main dovrà solo contenere gli oggetti e chiamare i meotodo, va fatta una classe team apposita con un array di studenti
     public static void main(String[] args) {
         // Creating instances of Studente
         Studente studente1 = new Studente("Riccardo", "Galante", 29, "Palermo",
@@ -29,13 +31,37 @@ public class Main {
 
     }
     //metodo per l'ordine alfabetico
-    public static void ordineAlfabetico(String studente1, String studente2, String studente3, String studente4){
-        String[] cognome = {String.valueOf(studente1), String.valueOf(studente2), String.valueOf(studente3), String.valueOf(studente4)};
-        Arrays.sort(cognome);
+    public static void ordineAlfabetico(String[] studenti){
+
+        Arrays.sort(studenti);
         System.out.println("Squadra in ordine alfabetico : " + Arrays.toString(cognome));
+
+
+        String[] arrayStringhe = {"Zebra", "Banana", "Mela", "Ananas", "Limone"};
+
+        // Ordina l'array in ordine alfabetico utilizzando Bubble Sort
+        int lunghezza = arrayStringhe.length;
+        for (int i = 0; i < lunghezza - 1; i++) {
+            for (int j = 0; j < lunghezza - i - 1; j++) {
+                if (arrayStringhe[j].compareTo(arrayStringhe[j + 1]) > 0) {
+                    // Scambia le posizioni se l'elemento successivo è più piccolo
+                    String temp = arrayStringhe[j];
+                    arrayStringhe[j] = arrayStringhe[j + 1];
+                    arrayStringhe[j + 1] = temp;
+                }
+            }
+        }
+
+        // Stampa l'array ordinato
+        System.out.println("Array ordinato in ordine alfabetico:");
+        for (String elemento : arrayStringhe) {
+            System.out.println(elemento);
+        }
     }
+
+
     // metodo per prendere l'età
-    public static void datoEtà(Studente[] team) {
+    public static void ordinaPerEta(Studente[] team) {
         for (int i = 0; i < team.length - 1; i++) {
             for (int j = i + 1; j < team.length; j++) {
                 if (team[i].getEtà() > team[j].getEtà()) {
@@ -51,10 +77,10 @@ public class Main {
         }
 
     }
-    public static void stampaCucciolo(Studente[] team){
-        for(int i = 0; i < team.length; i++){
-            if(!team[i].getNomeCucciolo().isEmpty()){
-                System.out.println("Studenti con animale domestico : " + team[i].getNome());
+    public static void stampaCucciolo(Studente[] studenti){
+        for(int i = 0; i < studenti.length; i++){
+            if(studenti[i].getNomeCucciolo() != null){
+                System.out.println("Studenti con animale domestico : " + studenti[i].getNome());
             }
         }
 
@@ -68,8 +94,7 @@ public class Main {
         for (int i = 0; i < team.length - 1; i++) {
             for (int j = i + 1; j < team.length; j++) {
                 if (team[i].getNome().equals(team[j].getNome())) {
-                    conteggioPerNome[i]++;
-                    conteggioPerNome[j]++;
+                   System.out.println(team[i].getNome());
                 }
             }
         }
@@ -89,6 +114,17 @@ public class Main {
         // Stampa un messaggio se non ci sono studenti con lo stesso nome
         if (!almenoUnNomeUguale) {
             System.out.println("Nessuno studente ha lo stesso nome.");
+        }
+    }
+    public static void stampaStudentiConNomiDuplicati(Studente[] elencoStudenti) {
+        // Ciclo attraverso l'array di studenti
+        for (int i = 0; i < elencoStudenti.length; i++) {
+            for (int j = i + 1; j < elencoStudenti.length; j++) {
+                // Confronta il nome dello studente corrente con gli altri studenti nell'array
+                if (elencoStudenti[i].getNome().equals(elencoStudenti[j].getNome())) {
+                    System.out.println("Studente con nome duplicato: " + elencoStudenti[i]);
+                }
+            }
         }
     }
 }
