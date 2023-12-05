@@ -59,16 +59,39 @@ public class Main {
 
     }
 
+    public static void stampaMembriStessoNome(Studente[] team) {
+        // Utilizza un array per contare gli studenti per nome
+        int[] conteggioPerNome = new int[team.length];
 
+        // Riempie l'array dei conteggi
+        for (int i = 0; i < team.length - 1; i++) {
+            for (int j = i + 1; j < team.length; j++) {
+                if (team[i].getNome().equals(team[j].getNome())) {
+                    conteggioPerNome[i]++;
+                    conteggioPerNome[j]++;
+                }
+            }
+        }
 
+        // Stampa gli studenti con lo stesso nome
+        boolean almenoUnNomeUguale = false;
+        for (int i = 0; i < team.length; i++) {
+            if (conteggioPerNome[i] > 0) {
+                if (!almenoUnNomeUguale) {
+                    System.out.println("Studenti con lo stesso nome:");
+                    almenoUnNomeUguale = true;
+                }
+                System.out.println(team[i].getNome() + " " + team[i].getCognome());
+            }
+        }
 
-
-
-
-
-
-
-
+        // Stampa un messaggio se non ci sono studenti con lo stesso nome
+        if (!almenoUnNomeUguale) {
+            System.out.println("Nessuno studente ha lo stesso nome.");
+        }
+    }
 }
+
+
 
 
