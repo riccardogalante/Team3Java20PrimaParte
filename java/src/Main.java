@@ -2,31 +2,21 @@ package src;
 
 import java.util.Arrays;
 
-public class Main {
+//public class Main {
 
-    ///TODO la classe main dovrà solo contenere gli oggetti e chiamare i meotodo, va fatta una classe team apposita con un array di studenti
+    /*///TODO la classe main dovrà solo contenere gli oggetti e chiamare i meotodo, va fatta una classe team apposita con un array di studenti
     public static void main(String[] args) {
         // Creating instances of Studente
-        Studente studente1 = new Studente("Riccardo", "Galante", 29, "Palermo",
-                "powerlift", " carbonara", "Elden Ring", "Piccoli Brividi", "Kingsman", " Cipo");
 
-        Studente studente2 = new Studente("Denise", "De Leo", 28, "Cosenza",
-                "Pilates", " Tutto", "", "Mrs. Doubtfire", "Orgoglio e pregiudizio", "");
 
-        Studente studente3 = new Studente("Roberto", "Favaro", 19, "Zoppola",
-                "Videogiochi", " Pizza", "Halo", "Senza domani", "", "Luna");
+        //Studente[] team;
 
-        Studente studente4 = new Studente("Marc Josef", "Conanan", 23, "Milano",
-                "Nuoto", "cotoletta bolognese", " Dota2", " Pulp fiction", " Norwegian Wood", "Ciccio");
+        //ordineAlfabetico(studente1.getCognome()+ " "+ studente1.getNome(), studente2.getCognome()+ " " + studente2.getNome(), studente3.getCognome()+ " " + studente3.getNome(), studente4.getCognome()+ " "+ studente4.getNome());
 
-        Studente[] team = {studente1, studente2, studente3, studente4};
+        //datoEtà(team);
 
-        ordineAlfabetico(studente1.getCognome()+ " "+ studente1.getNome(), studente2.getCognome()+ " " + studente2.getNome(), studente3.getCognome()+ " " + studente3.getNome(), studente4.getCognome()+ " "+ studente4.getNome());
-
-        datoEtà(team);
-
-        stampaCucciolo(team);
-        stampaMembriStessoNome(team);
+        //stampaCucciolo(team);
+        //stampaMembriStessoNome(team);
 
 
     }
@@ -34,7 +24,7 @@ public class Main {
     public static void ordineAlfabetico(String[] studenti){
 
         Arrays.sort(studenti);
-        System.out.println("Squadra in ordine alfabetico : " + Arrays.toString(cognome));
+        //System.out.println("Squadra in ordine alfabetico : " + Arrays.toString(cognome));
 
 
         String[] arrayStringhe = {"Zebra", "Banana", "Mela", "Ananas", "Limone"};
@@ -56,16 +46,16 @@ public class Main {
         System.out.println("Array ordinato in ordine alfabetico:");
         for (String elemento : arrayStringhe) {
             System.out.println(elemento);
-        }
-    }
+        //}
+    //}
 
 
     // metodo per prendere l'età
-    public static void ordinaPerEta(Studente[] team) {
-        for (int i = 0; i < team.length - 1; i++) {
-            for (int j = i + 1; j < team.length; j++) {
-                if (team[i].getEtà() > team[j].getEtà()) {
-                    Studente atemp = team[i];
+    //public static void ordinaPerEta(Studente[] team) {
+        //for (int i = 0; i < team.length - 1; i++) {
+          //  for (int j = i + 1; j < team.length; j++) {
+            //    if (team[i].getEtà() > team[j].getEtà()) {
+              /*      Studente atemp = team[i];
                     team[i] = team[j];
                     team[j] = atemp;
                 }
@@ -127,7 +117,7 @@ public class Main {
             }
         }
     }
-}
+}*/
 
 
 
