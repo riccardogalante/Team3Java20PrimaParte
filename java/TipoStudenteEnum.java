@@ -1,8 +1,6 @@
-package src;
-
 public enum TipoStudenteEnum {
 
-    DENISE("Denise","De Leo",28,"Cosenza","Pilates","Tutto","","Mrs. Doubtfire","Oroglio e pregiudizio",""),
+    DENISE("Denise","De Leo",28,"Cosenza","Pilates","Tutto",null,"Mrs. Doubtfire","Oroglio e pregiudizio",null),
     MARC("Marc Josef", "Conanan", 23, "Milano",
             "Nuoto", "cotoletta bolognese", " Dota2", " Pulp fiction", " Norwegian Wood", "Ciccio"),
     ROBERTO("Roberto", "Favaro", 19, "Zoppola",

@@ -1,7 +1,3 @@
-package src;
-
-import java.util.Arrays;
-
 public class Main {
 
     //TODO la classe main dovrà solo contenere gli oggetti e chiamare i meotodo, va fatta una classe team apposita con un array di studenti
@@ -9,11 +5,17 @@ public class Main {
         //Creating instances of Studente
         TipoStudenteEnum[] team = {TipoStudenteEnum.MARC, TipoStudenteEnum.DENISE, TipoStudenteEnum.RICCARDO, TipoStudenteEnum.ROBERTO};
 
+        stampaStudentiConNomiDuplicati(team);
+        ordineAlfabetico(team);
+        ordinaPerEta(team);
+        stampaCucciolo(team);
+        stampaMembriStessoNome(team);
+
 
 
     }
     // metodo per l'ordine alfabetico
-    public static void ordineAlfabetico(Studente[] team){
+    public static void ordineAlfabetico(TipoStudenteEnum[] team){
 
         String[] arrayStringhe = {TipoStudenteEnum.RICCARDO.getCognome(), TipoStudenteEnum.DENISE.getCognome(), TipoStudenteEnum.ROBERTO.getCognome(), TipoStudenteEnum.MARC.getCognome()};
 
@@ -36,11 +38,11 @@ public class Main {
         }
     }
     //metodo per prendere l'età
-    public static void ordinaPerEta(Studente[] team) {
+    public static void ordinaPerEta(TipoStudenteEnum[] team) {
         for (int i = 0; i < team.length - 1; i++) {
             for (int j = i + 1; j < team.length; j++) {
-                if (team[i].getTipoStudenteEnum().getEta() > team[j].getTipoStudenteEnum().getEta()) {
-                    Studente atemp = team[i];
+                if (team[i].getEta() > team[j].getEta()) {
+                    TipoStudenteEnum atemp = team[i];
                     team[i] = team[j];
                     team[j] = atemp;
                 }
@@ -48,27 +50,27 @@ public class Main {
         }
         System.out.println("Squadra in ordine di età:");
         for (int i = 0; i < team.length; i++) {
-            System.out.println(team[i].getTipoStudenteEnum().getNome() + " " + team[i].getTipoStudenteEnum().getEta());
+            System.out.println(team[i].getNome() + " " + team[i].getEta());
         }
 
     }
-    public static void stampaCucciolo(Studente[] studenti){
+    public static void stampaCucciolo(TipoStudenteEnum[] studenti){
         for(int i = 0; i < studenti.length; i++){
-            if(studenti[i].getTipoStudenteEnum().getNomeCucciolo() != null){
-                System.out.println("Studenti con animale domestico : " + studenti[i].getTipoStudenteEnum().getNome());
+            if(studenti[i].getNomeCucciolo() != null){
+                System.out.println("Studenti con animale domestico : " + studenti[i].getNome());
             }
         }
 
     }
-    public static void stampaMembriStessoNome(Studente[] team) {
+    public static void stampaMembriStessoNome(TipoStudenteEnum[] team) {
         // Utilizza un array per contare gli studenti per nome
         int[] conteggioPerNome = new int[team.length];
 
         // Riempie l'array dei conteggi
         for (int i = 0; i < team.length - 1; i++) {
             for (int j = i + 1; j < team.length; j++) {
-                if (team[i].getTipoStudenteEnum().getNome().equals(team[j].getTipoStudenteEnum().getNome())) {
-                    System.out.println(team[i].getTipoStudenteEnum().getNome());
+                if (team[i].getNome().equals(team[j].getNome())) {
+                    System.out.println(team[i].getNome());
                 }
             }
         }
@@ -80,7 +82,7 @@ public class Main {
                     System.out.println("Studenti con lo stesso nome:");
                     almenoUnNomeUguale = true;
                 }
-                System.out.println(team[i].getTipoStudenteEnum().getNome() + " " + team[i].getTipoStudenteEnum().getCognome());
+                System.out.println(team[i].getNome() + " " + team[i].getCognome());
             }
         }
         // Stampa un messaggio se non ci sono studenti con lo stesso nome
@@ -88,15 +90,23 @@ public class Main {
             System.out.println("Nessuno studente ha lo stesso nome.");
         }
     }
-    public static void stampaStudentiConNomiDuplicati(Studente[] elencoStudenti) {
+    public static void stampaStudentiConNomiDuplicati(TipoStudenteEnum[] team) {
+        boolean studentiConNomiDuplicati = false;
+
         // Ciclo attraverso l'array di studenti
-        for (int i = 0; i < elencoStudenti.length; i++) {
-            for (int j = i + 1; j < elencoStudenti.length; j++) {
+        for (int i = 0; i < team.length; i++) {
+            for (int j = i + 1; j < team.length; j++) {
                 // Confronta il nome dello studente corrente con gli altri studenti nell'array
-                if (elencoStudenti[i].getTipoStudenteEnum().getNome().equals(elencoStudenti[j].getTipoStudenteEnum().getNome())) {
-                    System.out.println("Studente con nome duplicato: " + elencoStudenti[i]);
+                if (team[i].getNome().equals(team[j].getNome())) {
+                    System.out.println("Studente con nome duplicato: " + team[i]);
+                    studentiConNomiDuplicati = true;
                 }
             }
+        }
+
+        // Stampa un messaggio se non ci sono studenti con lo stesso nome
+        if (!studentiConNomiDuplicati) {
+            System.out.println("Nessuno studente ha lo stesso nome.");
         }
     }
 }
