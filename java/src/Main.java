@@ -35,7 +35,7 @@ public class Main {
             System.out.println(elemento);
         }
     }
-     //metodo per prendere l'età
+    //metodo per prendere l'età
     public static void ordinaPerEta(Studente[] team) {
         for (int i = 0; i < team.length - 1; i++) {
             for (int j = i + 1; j < team.length; j++) {
@@ -68,7 +68,7 @@ public class Main {
         for (int i = 0; i < team.length - 1; i++) {
             for (int j = i + 1; j < team.length; j++) {
                 if (team[i].getTipoStudenteEnum().getNome().equals(team[j].getTipoStudenteEnum().getNome())) {
-                   System.out.println(team[i].getTipoStudenteEnum().getNome());
+                    System.out.println(team[i].getTipoStudenteEnum().getNome());
                 }
             }
         }
@@ -100,7 +100,3 @@ public class Main {
         }
     }
 }
-
-
-
-
