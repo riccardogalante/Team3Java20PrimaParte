@@ -10,7 +10,7 @@ public class Main {
         ordinaPerEta(team);
         stampaCucciolo(team);
         stampaMembriStessoNome(team);
-
+        videogiocoLOL(team);
 
 
     }
@@ -107,6 +107,15 @@ public class Main {
         // Stampa un messaggio se non ci sono studenti con lo stesso nome
         if (!studentiConNomiDuplicati) {
             System.out.println("Nessuno studente ha lo stesso nome.");
+        }
+    }
+    public static void videogiocoLOL(TipoStudenteEnum[] team){
+        for(int i = 0; i < team.length; i++){
+            if(team[i].getVideogiocoPreferito() == "LOL"){
+                System.out.println("Ha scritto LOL come videgioco preferito: "+ team[i].getNome());
+            }else if (team[i].getVideogiocoPreferito() == "League of legend"){
+                System.out.println("Ha scritto League of legend come videogioco preferito: " + team[i].getNome());
+            }
         }
     }
 }
